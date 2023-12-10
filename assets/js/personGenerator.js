@@ -193,7 +193,7 @@ const personGenerator = {
       this.person.month = this.randomMonthFeb28();
       this.person.day = this.randomIntNumber(1, 28);
     }
-    this.person.year = this.randomYear();
+    this.person.year = this.randomYear(1950, 1990);
     this.person.profession = this.randomРrofession();
     return this.person;
   },
