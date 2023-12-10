@@ -1,0 +1,18 @@
+body {
+    background-image: url(https://wallbox.ru/resize/2560x1600/wallpapers/main2/201722/149648880359329b6394f163.55799793.jpg);
+    position: absolute;
+    top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    background-size: cover;
+}
+
+.card-body {
+    background-color: rgb(255, 144, 144);
+}
+
+.card-header, .card-footer {
+    background-color: rgb(111, 250, 250);
+}
