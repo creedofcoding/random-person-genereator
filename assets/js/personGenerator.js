@@ -140,34 +140,18 @@ const personGenerator = {
     }
   },
 
-  randomMonth31: function randomMonth() {
-    let months = [
-      `января`,
-      `марта`,
-      `мая`,
-      `июля`,
-      `августа`,
-      `октября`,
-      `декабря`,
-    ];
-    let month = months[Math.floor(Math.random() * 7)];
-    return month;
-  },
-
-  randomMonth30: function randomMonth() {
-    let months = [`апреля`, `июня`, `сентября`, `ноября`];
-    let month = months[Math.floor(Math.random() * 4)];
-    return month;
-  },
-
-  randomMonthFeb28: function randomMonth() {
-    let month = `февраля`;
-    return month;
-  },
-
-  randomYear: function () {
-    return this.randomIntNumber(1950, 1990) + " г.р.";
-  },
+  randomDate: function() {
+    let startDate = new Date(1950, 0, 1);
+    let endDate = new Date(2005, 11, 31);
+    let date = new Date( + startDate + Math.random() * (endDate - startDate))
+    let options = {
+        year: 'numeric',
+        month: 'long',
+        day: '2-digit'
+    }
+   
+   return date.toLocaleString("ru", options)
+},
 
   randomРrofession: function () {
     if (this.person.gender == "Мужчина, ") {
@@ -183,17 +167,7 @@ const personGenerator = {
     this.person.surname = this.randomSurname();
     this.person.firstName = this.randomFirstName();
     this.person.patronymic = this.randomPatronymic();
-    if (mon === 0) {
-      this.person.month = this.randomMonth31();
-      this.person.day = this.randomIntNumber(1, 31);
-    } else if (mon === 1) {
-      this.person.month = this.randomMonth30();
-      this.person.day = this.randomIntNumber(1, 30);
-    } else if (mon === 2) {
-      this.person.month = this.randomMonthFeb28();
-      this.person.day = this.randomIntNumber(1, 28);
-    }
-    this.person.year = this.randomYear(1950, 1990);
+    this.person.birthdate = this.randomDate();
     this.person.profession = this.randomРrofession();
     return this.person;
   },
