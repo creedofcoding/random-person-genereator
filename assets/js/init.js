@@ -26,7 +26,7 @@ document.getElementById('btn_clear').addEventListener('click', function() {
   document.getElementById('firstNameOutput').innerText = 'Имя';
   document.getElementById('patronymicOutput').innerText = 'Отчество';
   document.getElementById('genderOutput').innerText = 'Пол, ';
-  document.getElementById('birthDayOutput').innerText = 'Дата рождения, ';
+  document.getElementById('birthDateOutput').innerText = 'Дата рождения, ';
   document.getElementById('professionOutput').innerText = 'Профессия';
 }
 );
