@@ -150,7 +150,7 @@ const personGenerator = {
         day: '2-digit'
     }
    
-   return date.toLocaleString("ru", options)
+   return date.toLocaleString("ru", options);
 },
 
   randomРrofession: function () {
